@@ -1,0 +1,10 @@
+* Inheritence - Parent class properties are inherited by the sub-class/child class.
+    Keywords:
+        Extends or Implements
+
+    5 types:-
+        1) Single
+        2) Multilevel
+        3) Hierarchical
+        4) Multiple
+        5) Hybrid

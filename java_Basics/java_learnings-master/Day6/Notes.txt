@@ -1,0 +1,28 @@
+-> Non-static variables
+
+public class Non-static {
+    {
+        Sytem.out.println("NSI") // non-static initializers
+    }
+
+    static {
+        Sytem.out.println("SI") // Static initializers
+    }
+    
+    public static void main(String[] args) {
+        NonStatic ns1 = new NonStatic();
+        NonStatic ns2 = new NonStatic();
+    }
+}
+
+-> OOPS
+1) Encapsulation - 
+* Binding the data in the class
+* Hiding the data
+* Getters and setters are used to access the data - Verification and validatiion
+
+Relation in java - Asoociation between two objects
+1) Has-A - One object dependent on other object 
+    a)Composition - Completely dependent on other object
+    b)Aggregation - Partial dependent on other object
+2) Is-A 

@@ -1,0 +1,13 @@
+* Exception:
+    It is occured during the run time.
+
+* Exception Handling:
+    1) try and catch block - suggested method
+    2) throws keyword - gives only warning  
+
+* JDBC
+    1. Load/Register Driver
+    2. Establish Connection
+    3. Establish Statement
+    4. Execute Statement
+    5. Close Connection       

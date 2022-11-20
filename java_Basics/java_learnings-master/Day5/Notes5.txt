@@ -1,0 +1,79 @@
+ Java Runtime Memory ->
+ When we run the java program a part of memory in the RAM is allocated for executing the program 
+ 4 types Memory:
+ 1) Method area
+ 2) Class Static area
+ 3) Stack area -- frames are created 
+ 4) Heap area
+
+ Static variables ->
+ * The variables which are declared inside the class block outside the method blocks and prefixed with static keyword are called static variables.
+ * Static variable which are in the same class can be called directly by using the variable name.
+ * Static variables from the other class can be called by using the classs name Ex: className.variableName -> test.a;
+ * If the name of the static variable and if the name of local variable are same then you can differentiate them by using the class name for static variable.
+ 
+
+ Local variable ->
+ * The variable which is declared inside the class block and inside the method block are any other block.
+ * Local variable belongs to that particular block only, outside the block local variable doesn't exist.
+
+Ex;
+class Test {
+    static int a =20;
+    public static void main(String[] args) {
+        int a = 10; 
+        System.out.println(a); // 10
+        System.out.println(Test.a); // 20
+        System.out.println(Test2.a); // 40
+    }
+}
+class Test2 {
+    static int a = 40;
+}
+
+ Satic method ->
+ * The methods which are prefixed with static keyword.
+ * Static method of the same class can be called directly by using the method name.
+ * Static methods from other class can be called by using className.methodName.
+
+class Test {
+    public static void main(String[] args) {
+        m1();
+        Test2.m1();
+    }
+    public static voud m1() {
+        System.out.println("m1 is test");
+    }
+}
+
+class Test2 {
+    public static void m1() {
+        System.out.println("m1 is test2");
+    }
+}
+
+ Initializers are used to execute startup instructions
+
+ Static initializers ->
+ They are executed during the class loading process.
+
+ 2 types :
+ 1) Single line static initializers -> static dataType variableName;
+ 2) Multiline static initializers -> static { .... }
+
+ -> MLSI
+ * All static methods are executed first
+ 
+ class Test {
+    static {
+        System.out.println("MLSI"); // executed first
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Inside main"); // executed at last
+    }
+
+    static {
+        System.out.println("MLSI-2"); // executed second
+    }
+ }
